@@ -6,7 +6,7 @@
 
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
-      <li class="header">HEADER</li>
+      <li class="header">NAVIGATION</li>
         <!-- Optionally, you can add icons to the links -->
       <li class=""><a href="<%= dashboard_path %>"><i class='fa fa-link'></i> <span>Dashboard</span></a></li>
       <li class="treeview <% if controller.controller_name == 'applicants' %>active<% end %>">
@@ -44,7 +44,7 @@
             <li><%= link_to "Add", new_recruiter_path %></li>
         </ul>
       </li>
-      <li class="<% if controller.controller_name == 'performance' %>active<% end %>"><a href="<%= performance_path %>"><i class='fa fa-bar-chart'></i> <span>Performance</span></a></li>
+      <li class="<% if controller.controller_name == 'performance' %>active<% end %>"><a href="<%= performance_path %>"><i class='fa fa-bar-chart'></i> <span>Recruitment Performance</span></a></li>
       <!-- <li><a href="#"><i class='fa fa-link'></i> <span>Exit</span></a></li> -->
     </ul><!-- /.sidebar-menu -->
   </section>

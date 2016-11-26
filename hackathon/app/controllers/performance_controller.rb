@@ -2,100 +2,76 @@ class PerformanceController < ApplicationController
   def index
     @statuses = Status.all
     # for 30 days prior today for all status
-    table = Array.new(5){Array.new(30)}
+    dt = 10
+    dm = 6
+    tableday = Array.new(5){Array.new(dt)}
+    tablemonth = Array.new(5){Array.new(dm)}
+    x_axd = Array.new(dt)
+    x_axm = Array.new(dm)
     for i in (1..5)
-      for j in (30..1)
-        table[i-1][j-1] = Status.GetStatus(i, j.days.ago)
+      for j in (1..dt)
+        tableday[i-1][j-1] = Status.get_count_day(i, j)
+        x_axd[j-1] = j.days.ago.strftime('%m-%d')
+      end
+      for j in (1..dm)
+        tablemonth[i-1][j-1] = Status.get_count_month(i, j)
+        x_axm[j-1] = j.months.ago.strftime('%m %Y')
       end
     end
 
-    @chart1 = LazyHighCharts::HighChart.new('graph') do |f|
+    @chartday = LazyHighCharts::HighChart.new('graph') do |f|
       # f.title(text: "Activity for the past few days")
-      f.xAxis(categories: (30..1).to_a)
-
-      f.series(name: Status.find(1).name, yAxis: 0, data: table[0])
-      f.series(name: Status.find(2).name, yAxis: 0, data: table[1])
-      f.series(name: Status.find(3).name, yAxis: 0, data: table[2])
-      f.series(name: Status.find(4).name, yAxis: 0, data: table[3])
-      f.series(name: Status.find(5).name, yAxis: 0, data: table[4])
-      # f.series(name: "Population in Millions", yAxis: 0, data: [310, 127, 1340, 81, 65])
-
+      f.xAxis(categories: x_axd.reverse)
+      for i in (1..@statuses.count)
+        f.series(name: Status.find(i).name, yAxis: 0, data: tableday[i-1].reverse)
+      end
       f.yAxis [
         {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
       ]
-
-      f.legend({itemStyle: '{"fontSize": "15px"}'})
+      f.legend({layout: 'horizontal'})
+      # f.plotOptions({line: {marker: "{enabled: false}", lineWidth: 1}})
       # f.chart({defaultSeriesType: "column"})
     end
 
-    @chart2 = LazyHighCharts::HighChart.new('graph') do |f|
+    @chartmonth = LazyHighCharts::HighChart.new('graph') do |f|
       # f.title(text: "Activity for the past few days")
-      f.xAxis(categories: ["Nov 21", "Nov 22", "Nov 23", "Nov 24", "Nov 25"])
-      @statuses.each do |v, k|
-        # f.series(name: v.name, yAxis: k, data: [14119, 5068, 4985, 3339, 2656])
+      f.xAxis(categories: x_axm.reverse)
+      for i in (1..@statuses.count)
+        f.series(name: Status.find(i).name, yAxis: 0, data: tablemonth[i-1].reverse)
       end
-      f.series(name: "GDP in Billions", yAxis: 0, data: [14119, 5068, 4985, 3339, 2656])
-      f.series(name: "Population in Millions", yAxis: 0, data: [310, 127, 1340, 81, 65])
-
       f.yAxis [
         {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
       ]
-
-      # f.legend(align: 'center', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
-      # f.chart({defaultSeriesType: "column"})
-    end
-
-    @chart3 = LazyHighCharts::HighChart.new('graph') do |f|
-      # f.title(text: "Activity for the past few days")
-      f.xAxis(categories: ["Nov 21", "Nov 22", "Nov 23", "Nov 24", "Nov 25"])
-      @statuses.each do |v, k|
-        # f.series(name: v.name, yAxis: k, data: [14119, 5068, 4985, 3339, 2656])
-      end
-      f.series(name: "GDP in Billions", yAxis: 0, data: [14119, 5068, 4985, 3339, 2656])
-      f.series(name: "Population in Millions", yAxis: 0, data: [310, 127, 1340, 81, 65])
-
-      f.yAxis [
-        {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
-      ]
-
-      # f.legend(align: 'center', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
-      # f.chart({defaultSeriesType: "column"})
-    end
-
-    @chart4 = LazyHighCharts::HighChart.new('graph') do |f|
-      # f.title(text: "Activity for the past few days")
-      f.xAxis(categories: ["Nov 21", "Nov 22", "Nov 23", "Nov 24", "Nov 25"])
-      @statuses.each do |v, k|
-        # f.series(name: v.name, yAxis: k, data: [14119, 5068, 4985, 3339, 2656])
-      end
-      f.series(name: "GDP in Billions", yAxis: 0, data: [14119, 5068, 4985, 3339, 2656])
-      f.series(name: "Population in Millions", yAxis: 0, data: [310, 127, 1340, 81, 65])
-
-      f.yAxis [
-        {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
-      ]
-
-      # f.legend(align: 'center', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
+      f.legend({layout: 'horizontal'})
+      # f.legend({itemStyle: '{"fontSize": "15px"}'})
       # f.chart({defaultSeriesType: "column"})
     end
   end
 
   def dashboard
     @statuses = Status.all
-    @chart = LazyHighCharts::HighChart.new('graph') do |f|
-      # f.title(text: "Activity for the past few days")
-      f.xAxis(categories: ["Nov 21", "Nov 22", "Nov 23", "Nov 24", "Nov 25"])
-      @statuses.each do |v, k|
-        # f.series(name: v.name, yAxis: k, data: [14119, 5068, 4985, 3339, 2656])
+    # for 30 days prior today for all status
+    dt = 7
+    tableday = Array.new(5){Array.new(dt)}
+    x_axd = Array.new(dt)
+    for i in (1..5)
+      for j in (1..dt)
+        tableday[i-1][j-1] = Status.get_count_day(i, j)
+        x_axd[j-1] = j.days.ago.strftime('%m-%d')
       end
-      f.series(name: "GDP in Billions", yAxis: 0, data: [1000, 900, 800, 700, 500])
-      f.series(name: "Population in Millions", yAxis: 0, data: [310, 127, 1340, 81, 65])
+    end
 
+    @chartday = LazyHighCharts::HighChart.new('graph') do |f|
+      # f.title(text: "Activity for the past few days")
+      f.xAxis(categories: x_axd.reverse)
+      for i in (1..@statuses.count)
+        f.series(name: Status.find(i).name, yAxis: 0, data: tableday[i-1].reverse)
+      end
       f.yAxis [
         {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
       ]
-
-      # f.legend(align: 'center', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
+      f.legend({layout: 'horizontal'})
+      # f.plotOptions({line: {marker: "{enabled: false}", lineWidth: 1}})
       # f.chart({defaultSeriesType: "column"})
     end
   end

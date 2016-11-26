@@ -20,6 +20,6 @@ class Applicant < ActiveRecord::Base
 			percent_exp = 40
 		end
 
-		return (1 - (((gpa-1)/5)*0.01))*40 + percent_exp + (language_count/4)*20 
+		return (1 - (((gpa-1)/5)*0.01))*40 + percent_exp + (language_count/4)*20
 	end
 end

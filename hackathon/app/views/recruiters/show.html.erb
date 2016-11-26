@@ -1,20 +1,29 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-xs-12 col-md-12">
-        <center>
-        <div class="row">
-              <br><br>
-                <%= image_tag("empty-profile.png", size:"150x150", alt: "Edit Entry", class: "img-responsive")%>
-            
-              <h3>
-                <strong><%= @recruiter.name %></strong>
-              </h3>
-              <br>
-        </div>
-    </center>
+    <div class="row">
+      <div class="col-sm-2">
+        <%= image_tag("empty-profile.png", size:"150x150", alt: "Edit Entry", class: "img-responsive")%>
+      </div>
+      <div class="col-sm-10">
+        <h3>
+          <strong><%= @recruiter.name %></strong>
+        </h3>
+        <h6>Recruitment Specialist</h6>
+        <br><br>
+        <h4>
+          Success Rate: <%= @recruiter.rate.floor %>
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-12">
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">People recruited by <%= @recruiter.name %></h3>
+        <h3 class="box-title">Referred applicants</h3>
       </div>
       <div class="box-body table-responsive">
         <div class="row">
@@ -57,8 +66,8 @@
       </div>
 </div>
   <h4><center>
-    <%= link_to 'Edit', edit_recruiter_path(@recruiter) %> |
-    <%= link_to 'Back', recruiters_path %>
+    <!-- <%= link_to 'Edit', edit_recruiter_path(@recruiter) %> |
+    <%= link_to 'Back', recruiters_path %> -->
     </center></h4>
 
   </div>
