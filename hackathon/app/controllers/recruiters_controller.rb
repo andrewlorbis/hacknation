@@ -5,11 +5,17 @@ class RecruitersController < ApplicationController
   # GET /recruiters.json
   def index
     @recruiters = Recruiter.all
+    len = Recruiter.all.count
+    @counts = Array.new(len)
+    (1..len).each do |i|
+        @counts[i-1] = Recruiter.find(i).applicant.count
+    end
   end
 
   # GET /recruiters/1
   # GET /recruiters/1.json
   def show
+      @applicants = @recruiter.applicant
   end
 
   # GET /recruiters/new
