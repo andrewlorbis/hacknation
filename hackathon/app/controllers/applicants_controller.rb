@@ -26,9 +26,10 @@ class ApplicantsController < ApplicationController
       # f.series(name: "Actual", yAxis: 0, data: act, color: 'rgb(109,179,63)', pointPlacement: 0.0)
       # f.series(name: "Ave", yAxis: 0, data: avg, color: 'rgba(76,179,207,0.5)', pointPlacement: 0.05)
 
-      f.series(name: "Max", yAxis: 0, data: max, color: 'rgba(0,0,0,0.5)')
+      f.series(name: "Max", yAxis: 0, data: max, color: 'rgba(0,0,0,0.5)', visible: false)
       f.series(name: "Actual", yAxis: 0, data: act, color: 'rgb(109,179,63)')
-      f.series(name: "Ave", yAxis: 0, data: avg, color: 'rgba(76,179,207,0.5)')
+      f.series(name: "Ave", yAxis: 0, data: avg, color: 'rgba(0,179,207,0.5)')
+      f.series(name: "Min", yAxis: 0, data: min, color: 'rgba(255,255,0,0.5)', visible: false)
 
       f.yAxis [
         {title: {text: "Score"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
