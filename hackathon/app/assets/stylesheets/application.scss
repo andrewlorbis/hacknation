@@ -38,21 +38,28 @@
         }
 
 //#6db33f = Cognizant Green
+.navbar-dashboard, .logo {
+    background-color: #4cb3cf !important;
+}
 
 body,a,span {
     font-family: 'OpenSans';
 }
 
 a:hover {
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
 }
 
 .title {
      font-family: 'Timeburner';
  }
 
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Montserrat';
+}
+
+.inline-block {
+    display:inline-block;
 }
 
 // Landing Page Customizations
