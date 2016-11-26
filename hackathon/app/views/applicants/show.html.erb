@@ -8,37 +8,38 @@
       </div>
       <div class="box-body">
         <div class="row">
-            <div class="col-xs-10 col-md-4">
-                <center><%= image_tag("empty-profile.png", alt: "Edit Entry", class: "img-responsive")%></center>
+            <div class="col-xs-10 col-md-4 text-center">
+              <br><br>
+                <%= image_tag("empty-profile.png", alt: "Edit Entry", class: "img-responsive")%>
             </div>
             <div class="col-xs-12 col-md-8">
               <h3>
                 <strong><%= @applicant.name %></strong>
               </h3>
               <br>
-              <h4 class="inline-block">
+              <h5 class="inline-block">
                 <strong>Age:</strong>
-              </h4>
+              </h5>
               <%= @applicant.age %>
               <br>
-              <h4 class="inline-block">
+              <h5 class="inline-block">
                 <strong>Location:</strong>
-              </h4>
+              </h5>
               <%= @applicant.location %>
               <br>
-              <h4 class="inline-block">
+              <h5 class="inline-block">
                 <strong>GPA:</strong>
-              </h4>
+              </h5>
               <%= @applicant.gpa %>
               <br>
-              <h4 class="inline-block">
+              <h5 class="inline-block">
                 <strong>Years of Experience:</strong>
-              </h4>
+              </h5>
               <%= @applicant.exp %>
               <br>
-              <h4 class="inline-block">
+              <h5 class="inline-block">
                   <strong>Application Status:</strong>
-              </h4>
+              </h5>
               <%= @applicant.status.name %>
               <br>
               <h4><%= link_to 'Edit', edit_applicant_path(@applicant) %> |
