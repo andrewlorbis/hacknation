@@ -13,14 +13,14 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require dataTables/jquery.dataTables
-//= require turbolinks
 //= require jquery.slimscroll
-//= require app
-//= require_tree .
+//= require dataTables/jquery.dataTables
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
+//= require turbolinks
+//= require app
+//= require_tree .
 
 
 //Code for navbar-scrolling
