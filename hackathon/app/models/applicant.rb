@@ -1,6 +1,7 @@
 class Applicant < ActiveRecord::Base
-	has_one :recruter
-	has_one :status
-	has_one :position
-	has_many :languages
+	belongs_to :recruiter
+	belongs_to :status
+	belongs_to :position
+	has_many :applicant_languages
+	has_many :language, through: :applicant_languages
 end

@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126061311) do
+ActiveRecord::Schema.define(version: 20161126100056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applicant_languages", force: :cascade do |t|
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "applicant_id"
+    t.integer  "language_id"
+  end
 
   create_table "applicants", force: :cascade do |t|
     t.string   "name"
@@ -22,9 +29,16 @@ ActiveRecord::Schema.define(version: 20161126061311) do
     t.string   "location"
     t.float    "gpa"
     t.float    "exp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "recruiter_id"
+    t.integer  "status_id"
+    t.integer  "position_id"
   end
+
+  add_index "applicants", ["position_id"], name: "index_applicants_on_position_id", using: :btree
+  add_index "applicants", ["recruiter_id"], name: "index_applicants_on_recruiter_id", using: :btree
+  add_index "applicants", ["status_id"], name: "index_applicants_on_status_id", using: :btree
 
   create_table "languages", force: :cascade do |t|
     t.string   "name"
