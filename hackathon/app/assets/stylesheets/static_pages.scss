@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Landing Page Customizations
+
 @media(max-width:767px) {
     .title {
         font-size: 3em !important;
@@ -54,6 +56,17 @@
     	width: 150px !important;
     	height: 150px !important;
     }
+
+    .navbar-start {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
 }
 
 .content-header{
@@ -85,4 +98,40 @@
 
 .titlesub {
 	color: #fafafa !important;
+}
+
+.inline-block {
+    display:inline-block;
+}
+
+.intro-section {
+    min-height: 100%;
+    padding-bottom: 200px;
+    text-align: center;
+    background: #ecf0f5;
+}
+
+.services-section {
+    height: 100%;
+    padding-bottom: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 5px !important;
+    padding-bottom: 200px;
+    text-align: center;
+    background: #eee;
+}
+
+.navbar-nav-title{
+    display: inline-block;
+    float:none;
+    vertical-align: top;
+}
+.navbar-title {
+    background-color: rgba(255,0,255,0);
+    border:0 !important;
 }
