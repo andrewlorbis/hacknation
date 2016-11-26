@@ -27,6 +27,14 @@ gem 'adminlte2-rails'
 gem 'bootstrap_form'
 gem 'bootstrap-sass'
 
+# https://github.com/michelson/lazy_high_charts
+# This gem provides a simple and extremely flexible way to use HighCharts from ruby code. Tested on Ruby on Rails, Sinatra and Nanoc, but it should work with others too.
+gem 'lazy_high_charts'
+
+# https://github.com/iblue/d3-rails
+# D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG and CSS.
+gem 'd3-rails'
+
 gem 'faker'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
