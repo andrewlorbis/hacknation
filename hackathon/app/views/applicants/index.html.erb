@@ -28,7 +28,6 @@
         <h3 class="box-title">View Potential Applicants</h3>
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
         </div>
       </div>
       <div class="box-body table-responsive">
@@ -62,7 +61,7 @@
                     <td><%= applicant.status.name %></td>
                     <td><center><%= link_to applicant do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to edit_applicant_path(applicant) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
-                    <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
+                    <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure to remove this applicant?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
                   </tr>
                 <% end %>
               </tbody>
@@ -87,53 +86,79 @@
       <div class="box-body">
         <div class="row">
           <div class="col-md-12">
+            <span>Click a category below:</span>
+            <br><br>
             <form role="form" id="appForm">
-              <div class="form-group">
-                <label for="agerange">Age range</label>
-                <% if !@agerange.blank? %>
-                  <% @agerange.each_with_index do |v, k| %>
-                  <div class="checkbox">
-                    <label><input type="checkbox" name="agerange" value="<%= k %>"> <%= v %></label>
+              <div class="panel-group">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <a data-toggle="collapse" href="#col1">Age range</a>
                   </div>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="form-group">
-                <label for="position">Position applied</label>
-                <% if !@positions.blank? %>
-                <% @positions.each_with_index do |v, k| %>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="position" value="<%= k %>"> <%= v.name %></label>
+                  <div id="col1" class="panel-collapse collapse">
+                    <div class="form-group">
+                      <% if !@agerange.blank? %>
+                        <% @agerange.each_with_index do |v, k| %>
+                        <div class="checkbox">
+                          <label><input type="checkbox" name="agerange" value="<%= v %>"> <%= v %></label>
+                        </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
                 </div>
-                <% end %>
-                <% end %>
-              </div>
-              <div class="form-group">
-                <label for="language">Programming skills</label>
-                <% if !@languages.blank? %>
-                <% @languages.each_with_index do |v, k| %>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="languages" value="<%= k %>"> <%= v.name %></label>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <a data-toggle="collapse" href="#col2">Position applied</a>
+                  </div>
+                  <div id="col2" class="panel-collapse collapse">
+                    <div class="form-group">
+                      <% if !@positions.blank? %>
+                      <% @positions.each_with_index do |v, k| %>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="position" value="<%= v.name %>"> <%= v.name %></label>
+                      </div>
+                      <% end %>
+                      <% end %>
+                    </div>
+                  </div>
                 </div>
-                <% end %>
-                <% end %>
-              </div>
-              <div class="form-group">
-                <label for="status">Recruitment status</label>
-                <% if !@statuses.blank? %>
-                <% @statuses.each_with_index do |v, k| %>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="languages" value="<%= k %>"> <%= v.name %></label>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <a data-toggle="collapse" href="#col3">Programming skills</a>
+                  </div>
+                  <div id="col3" class="panel-collapse collapse">
+                    <div class="form-group">
+                      <% if !@languages.blank? %>
+                      <% @languages.each_with_index do |v, k| %>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="language" value="<%= v.name %>"> <%= v.name %></label>
+                      </div>
+                      <% end %>
+                      <% end %>
+                    </div>
+                  </div>
                 </div>
-                <% end %>
-                <% end %>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <a data-toggle="collapse" href="#col4">Recruitment status</a>
+                  </div>
+                  <div id="col4" class="panel-collapse collapse">
+                    <div class="form-group">
+                      <% if !@statuses.blank? %>
+                      <% @statuses.each_with_index do |v, k| %>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="status" value="<%= v.name %>"> <%= v.name %></label>
+                      </div>
+                      <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
               </div>
             </form>
+            <button type="button" class="btn btn-primary" id="apply">Apply filters</button>
           </div>
         </div>
-      </div>
-      <div class="box-footer">
-        <%= button_to 'Apply Filters', new_applicant_path, class: 'btn btn-primary', type: 'button', method: :get %>
       </div>
     </div>
   </div>

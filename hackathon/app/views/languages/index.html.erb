@@ -19,7 +19,6 @@
               <li><a href="#">Separated link</a></li>
             </ul>
           </div> -->
-          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
         </div>
       </div>
       <div class="box-body">
@@ -29,9 +28,6 @@
               <thead>
                 <tr>
                     <th>Name</th>
-                    <th style="width:5%;">Show</th>
-                    <th style="width:4%;">Edit</th>
-                    <th style="width:5%;">Destroy</th>
                 </tr>
               </thead>
 
@@ -39,9 +35,7 @@
                   <% @languages.each do |language| %>
                     <tr>
                       <td><%= language.name %></td>
-                      <td><center><%= link_to language do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
-                      <td><center><%= link_to edit_language_path(language) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
-                      <td><center><%= link_to language, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
+                      <!--Removed show edit destroy, does not make sense to apply here-->
                     </tr>
                 <% end %>
               </tbody>

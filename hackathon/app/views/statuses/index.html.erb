@@ -19,7 +19,7 @@
               <li><a href="#">Separated link</a></li>
             </ul>
           </div> -->
-          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          <!-- <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button> -->
         </div>
       </div>
       <div class="box-body">
@@ -29,9 +29,6 @@
               <thead>
                 <tr>
                     <th>Name</th>
-                    <th style="width:5%;">Show</th>
-                    <th style="width:4%;">Edit</th>
-                    <th style="width:5%;">Destroy</th>
                   </tr>
                 </thead>
 
@@ -39,9 +36,7 @@
                   <% @statuses.each do |status| %>
                     <tr>
                       <td><%= status.name %></td>
-                      <td><center><%= link_to status do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
-                      <td><center><%= link_to edit_status_path(status) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
-                      <td><center><%= link_to status, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
+                      <!--Removed-->
                     </tr>
                   </tr>
                 <% end %>

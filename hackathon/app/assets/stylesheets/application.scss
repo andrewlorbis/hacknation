@@ -13,14 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
 @import "bootstrap-sprockets";
+@import "rails_bootstrap_forms";
 
- @import "AdminLTE/AdminLTE";
- @import "AdminLTE/skins/skin-blue";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
 
- @import "rails_bootstrap_forms";
- @import "bootstrap";
- @import "bootstrap-sprockets";
 
 //Custom fonts
 @font-face {
@@ -39,13 +38,16 @@
         }
 
 //#6db33f = Cognizant Green
+.navbar-dashboard, .logo {
+    background-color: #4cb3cf !important;
+}
 
 body,a,span {
     font-family: 'OpenSans';
 }
 
 a:hover {
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
 }
 
 .title {
@@ -53,8 +55,12 @@ a:hover {
      font-size: 8 em;
  }
 
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Montserrat';
+}
+
+.inline-block {
+    display:inline-block;
 }
 
 // Landing Page Customizations
