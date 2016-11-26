@@ -28,24 +28,21 @@
             <table class="table table-bordered table-hover dataTable">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <!-- TODO: INSERT PARAMS HERE -->
-                  <!-- <th>Age</th>
-                  <th>Location</th>
-                  <th>Gpa</th>
-                  <th>Exp</th>
-                  <th colspan="3"></th> -->
+                    <th>Name</th>
+                    <th style="width:5%;">Show</th>
+                    <th style="width:4%;">Edit</th>
+                    <th style="width:5%;">Destroy</th>
                 </tr>
               </thead>
 
               <tbody>
-                <% @languages.each do |language| %>
-                  <tr>
-                     <!--TODO: ADD REQUIRED PARAMS HERE-->
-                    <td><%= link_to 'Show', language %></td>
-                    <td><%= link_to 'Edit', edit_language_path(language) %></td>
-                    <td><%= link_to 'Destroy', language, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                  </tr>
+                  <% @languages.each do |language| %>
+                    <tr>
+                      <td><%= language.name %></td>
+                      <td><center><%= link_to language do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
+                      <td><center><%= link_to edit_language_path(language) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
+                      <td><center><%= link_to language, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
+                    </tr>
                 <% end %>
               </tbody>
             </table>

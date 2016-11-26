@@ -29,22 +29,19 @@
               <thead>
                 <tr>
                   <th>Name</th>
-                  <!-- TODO: INSERT PARAMS HERE -->
-                  <!-- <th>Age</th>
-                  <th>Location</th>
-                  <th>Gpa</th>
-                  <th>Exp</th>
-                  <th colspan="3"></th> -->
+                  <th style="width:5%;">Show</th>
+                  <th style="width:4%;">Edit</th>
+                  <th style="width:5%;">Destroy</th>
                 </tr>
               </thead>
 
               <tbody>
                 <% @positions.each do |position| %>
                   <tr>
-                     <!--TODO: ADD REQUIRED PARAMS HERE-->
-                    <td><%= link_to 'Show', position %></td>
-                    <td><%= link_to 'Edit', edit_position_path(position) %></td>
-                    <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <td><%= position.name %></td>
+                    <td><center><%= link_to position do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
+                    <td><center><%= link_to edit_position_path(position) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
+                    <td><center><%= link_to position, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
                   </tr>
                 <% end %>
               </tbody>
