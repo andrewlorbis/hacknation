@@ -50,6 +50,8 @@ a:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
+a:visited{color:inherit}
+
 .title {
      font-family: 'Montserrat';
      font-size: 8 em;
@@ -59,52 +61,4 @@ h1, h2, h3, h4, h5 {
     font-family: 'Montserrat';
 }
 
-.inline-block {
-    display:inline-block;
-}
 
-// Landing Page Customizations
-@media(min-width:767px) {
-    .navbar-start {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .top-nav-collapse {
-        padding: 0;
-    }
-}
-
-.intro-section {
-    min-height: 100%;
-    padding-bottom: 200px;
-    text-align: center;
-    background: #ecf0f5;
-}
-
-.services-section {
-    height: 100%;
-    padding-bottom: 150px;
-    text-align: center;
-    background: #fff;
-}
-
-.contact-section {
-    height: 100%;
-    padding-top: 5px !important;
-    padding-bottom: 200px;
-    text-align: center;
-    background: #eee;
-}
-
-.navbar-nav-title{
-    display: inline-block;
-    float:none;
-    vertical-align: top;
-}
-.navbar-title {
-    background-color: rgba(255,0,255,0);
-    border:0 !important;
-}
