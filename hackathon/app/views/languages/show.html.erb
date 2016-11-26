@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="col-md-12">
+        <center>
+        <h3>
+          <strong>
+            <%= @language.name %>
+          </strong>
+        </h3>
+        <% @applicants.each do |applicant| %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @language.name %>
-</p>
-
-<%= link_to 'Edit', edit_language_path(@language) %> |
-<%= link_to 'Back', languages_path %>
+        <% end %>
+        <h4><%= link_to 'Edit', edit_language_path(@language) %> |
+        <%= link_to 'Back', languages_path %></h4>
+        </center>
+    </div>
+</div>
