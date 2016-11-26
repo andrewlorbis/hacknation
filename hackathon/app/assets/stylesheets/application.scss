@@ -13,14 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
 @import "bootstrap-sprockets";
+@import "rails_bootstrap_forms";
 
- @import "AdminLTE/AdminLTE";
- @import "AdminLTE/skins/skin-blue";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
 
- @import "rails_bootstrap_forms";
- @import "bootstrap";
- @import "bootstrap-sprockets";
 
 //Custom fonts
 @font-face {
