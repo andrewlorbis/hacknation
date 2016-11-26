@@ -14,7 +14,7 @@ class PerformanceController < ApplicationController
         {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
       ]
 
-      # f.legend(align: 'center', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
+      f.legend({itemStyle: '{"fontSize": "15px"}'})
       # f.chart({defaultSeriesType: "column"})
     end
 
