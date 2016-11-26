@@ -37,8 +37,11 @@ for i in 1...100
 					     gpa: rand.round(2) * (5 - 1) + 1, 
 					     exp: rand.round(1) * (10 - 1) + 1
 					 	)
-	status.sample.applicant << a
+	#status.sample.applicant << a
 	position.sample.applicant << a
 	recruiter.sample.applicant << a
+	a.statuses << status.sample
 	a.language << language.sample(rand(1...5))
+	a.updated_at = rand(1..30).days.ago
+	a.save
 end

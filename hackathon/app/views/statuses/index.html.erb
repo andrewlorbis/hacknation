@@ -29,17 +29,19 @@
               <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Count</th>
+                    <th style="width:5%;">Show</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <% @statuses.each do |status| %>
-                    <tr>
-                      <td><%= status.name %></td>
-                      <!--Removed-->
-                    </tr>
-                  </tr>
-                <% end %>
+                    <% @statuses.each_with_index do |status, k| %>
+                      <tr>
+                        <td><%= status.name %></td>
+                        <td><%= @counts[k] %></td>
+                        <td><center><%= link_to status do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
+                      </tr>
+                  <% end %>
               </tbody>
             </table>
 

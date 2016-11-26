@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126100056) do
+ActiveRecord::Schema.define(version: 20161126135756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,19 @@ ActiveRecord::Schema.define(version: 20161126100056) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "recruiter_id"
-    t.integer  "status_id"
     t.integer  "position_id"
   end
 
   add_index "applicants", ["position_id"], name: "index_applicants_on_position_id", using: :btree
   add_index "applicants", ["recruiter_id"], name: "index_applicants_on_recruiter_id", using: :btree
-  add_index "applicants", ["status_id"], name: "index_applicants_on_status_id", using: :btree
+
+  create_table "applicants_statuses", id: false, force: :cascade do |t|
+    t.integer "applicant_id"
+    t.integer "status_id"
+  end
+
+  add_index "applicants_statuses", ["applicant_id"], name: "index_applicants_statuses_on_applicant_id", using: :btree
+  add_index "applicants_statuses", ["status_id"], name: "index_applicants_statuses_on_status_id", using: :btree
 
   create_table "languages", force: :cascade do |t|
     t.string   "name"

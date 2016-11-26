@@ -5,11 +5,17 @@ class StatusesController < ApplicationController
   # GET /statuses.json
   def index
     @statuses = Status.all
+    len = Status.all.count
+    @counts = Array.new(len)
+    (1..len).each do |i|
+        @counts[i-1] = Status.find(i).applicants.count
+    end
   end
 
   # GET /statuses/1
   # GET /statuses/1.json
   def show
+      @applicants = @status.applicants
   end
 
   # GET /statuses/new

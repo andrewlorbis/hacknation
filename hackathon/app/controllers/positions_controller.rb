@@ -5,11 +5,17 @@ class PositionsController < ApplicationController
   # GET /positions.json
   def index
     @positions = Position.all
+    len = Position.all.count
+    @counts = Array.new(len)
+    (1..len).each do |i|
+        @counts[i-1] = Position.find(i).applicant.count
+    end
   end
 
   # GET /positions/1
   # GET /positions/1.json
   def show
+      @applicants = @position.applicant
   end
 
   # GET /positions/new
