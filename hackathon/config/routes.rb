@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get 'login' => 'static_pages#login'
   get 'performance' => 'performance#index'
-  get 'dashboard' => 'static_pages#dashboard'
+  get 'dashboard' => 'performance#dashboard'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
