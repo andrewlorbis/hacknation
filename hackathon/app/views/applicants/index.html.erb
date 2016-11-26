@@ -33,7 +33,7 @@
       <div class="box-body table-responsive">
         <div class="row">
           <div class="col-md-12">
-            <table class="table table-bordered table-hover table-striped dataTable" id="appTable">
+            <table class="table table-bordered table-hover table-striped dataTable" role="grid" id="appTable">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -58,7 +58,7 @@
                     <td><%= applicant.location %></td>
                     <td><%= applicant.gpa %></td>
                     <td><%= applicant.exp %></td>
-                    <td><%= applicant.statuses.name %></td>
+                    <td><%= applicant.statuses.last.name %></td>
                     <td><center><%= link_to applicant do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to edit_applicant_path(applicant) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure to remove this applicant?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
