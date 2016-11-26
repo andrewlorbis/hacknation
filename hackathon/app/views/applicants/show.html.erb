@@ -1,39 +1,73 @@
 <p id="notice"><%= notice %></p>
+
 <div class="row">
-    <div class="col-md-4 col-md-offset-1">
-        <center><%= image_tag("empty-profile.png", size: "280x280", alt: "Edit Entry")%></center>
+  <div class="col-xs-12 col-md-6">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Applicant's Information</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <center><%= image_tag("empty-profile.png", alt: "Edit Entry", class: "img-responsive")%></center>
+            </div>
+            <div class="col-xs-12 col-md-8">
+              <h3>
+                <strong><%= @applicant.name %></strong>
+              </h3>
+              <br>
+              <h4 class="inline-block">
+                <strong>Age:</strong>
+              </h4>
+              <%= @applicant.age %>
+              <br>
+              <h4 class="inline-block">
+                <strong>Location:</strong>
+              </h4>
+              <%= @applicant.location %>
+              <br>
+              <h4 class="inline-block">
+                <strong>GPA:</strong>
+              </h4>
+              <%= @applicant.gpa %>
+              <br>
+              <h4 class="inline-block">
+                <strong>Years of Experience:</strong>
+              </h4>
+              <%= @applicant.exp %>
+              <br>
+              <h4 class="inline-block">
+                  <strong>Application Status:</strong>
+              </h4>
+              <%= @applicant.status.name %>
+              <br>
+              <h4><%= link_to 'Edit', edit_applicant_path(@applicant) %> |
+              <%= link_to 'Back', applicants_path %> </h4>
+            </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-        <h3>
-          <strong><%= @applicant.name %></strong>
-        </h3>
-        <br>
-        <h4 class="inline-block">
-          <strong>Age:</strong>
-        </h4>
-        <%= @applicant.age %>
-        <br>
-        <h4 class="inline-block">
-          <strong>Location:</strong>
-        </h4>
-        <%= @applicant.location %>
-        <br>
-        <h4 class="inline-block">
-          <strong>GPA:</strong>
-        </h4>
-        <%= @applicant.gpa %>
-        <br>
-        <h4 class="inline-block">
-          <strong>Years of Experience:</strong>
-        </h4>
-        <%= @applicant.exp %>
-        <br>
-        <h4 class="inline-block">
-            <strong>Application Status:</strong>
-        </h4>
-        <%= @applicant.status.name %>
-        <br>
-        <h4><%= link_to 'Edit', edit_applicant_path(@applicant) %> |
-        <%= link_to 'Back', applicants_path %> </h4>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Relative Performance</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-12">
+            <%= high_chart("some_id", @chart) %>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

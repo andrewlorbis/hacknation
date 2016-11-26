@@ -14,6 +14,27 @@ class ApplicantsController < ApplicationController
   # GET /applicants/1
   # GET /applicants/1.json
   def show
+    max = [Applicant.maximum('age'), Applicant.maximum('gpa'), Applicant.maximum('exp')]
+    avg = [Applicant.average('age').truncate(2).to_f, Applicant.average('gpa').truncate(2).to_f, Applicant.average('exp').truncate(2).to_f]
+    act = [@applicant.age, @applicant.gpa, @applicant.exp]
+    min = [Applicant.minimum('age'), Applicant.minimum('gpa'), Applicant.minimum('exp')]
+    @chart = LazyHighCharts::HighChart.new('graph') do |f|
+      # f.title(text: "Activity for the past few days")
+      f.xAxis(categories: ["Age", "GPA", "Y_Exp"])
+
+      f.series(name: "Max", yAxis: 0, data: max)
+      f.series(name: "Actual", yAxis: 0, data: act)
+      f.series(name: "Ave", yAxis: 0, data: avg)
+
+      f.yAxis [
+        {title: {text: "Score"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
+      ]
+
+      f.chart({defaultSeriesType: "column"})
+      f.legend({shadow: false})
+      f.tooltip({shared: true})
+      f.plotOptions({column: {grouping: false, shadow:false, borderWidth: 0}})
+    end
   end
 
   # GET /applicants/new
