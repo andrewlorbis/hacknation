@@ -2,14 +2,56 @@
 <div class="row">
     <div class="col-md-12">
         <center>
-        <h3>
+        <h3>Language:
           <strong>
             <%= @language.name %>
           </strong>
         </h3>
-        <% @applicants.each do |applicant| %>
+        </center>
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">People who know <%= @language.name %></h3>
+          </div>
+          <div class="box-body table-responsive">
+            <div class="row">
+              <div class="col-md-12">
+                <table class="table table-bordered table-hover" id="appTable">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position Applied</th>
+                      <th>Age</th>
+                      <th>Location</th>
+                      <th>Gpa</th>
+                      <th>Exp</th>
+                      <th>Status</th>
+                      <th style="width:5%;">Show</th>
+                      <th style="width:4%;">Edit</th>
+                      <th style="width:5%;">Destroy</th>
+                    </tr>
+                  </thead>
 
-        <% end %>
+                  <tbody>
+                    <% @applicants.each do |applicant| %>
+                      <tr>
+                        <td><%= applicant.name %></td>
+                        <td><%= applicant.position.name %></td>
+                        <td><%= applicant.age %></td>
+                        <td><%= applicant.location %></td>
+                        <td><%= applicant.gpa %></td>
+                        <td><%= applicant.exp %></td>
+                        <td><%= applicant.status.name %></td>
+                        <td><center><%= link_to applicant do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
+                        <td><center><%= link_to edit_applicant_path(applicant) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
+                        <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure to remove this applicant?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+         <center>
         <h4><%= link_to 'Edit', edit_language_path(@language) %> |
         <%= link_to 'Back', languages_path %></h4>
         </center>
