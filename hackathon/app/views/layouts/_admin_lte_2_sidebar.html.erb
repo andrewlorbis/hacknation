@@ -66,6 +66,7 @@
             <li><%= link_to "Add", new_recruiter_path %></li>
         </ul>
       </li>
+      <li class="<% if controller.controller_name == 'performance' %>active<% end %>"><a href="<%= performance_path %>"><i class='fa fa-bar-chart'></i> <span>Performance</span></a></li>
       <!-- <li><a href="#"><i class='fa fa-link'></i> <span>Exit</span></a></li> -->
     </ul><!-- /.sidebar-menu -->
   </section>

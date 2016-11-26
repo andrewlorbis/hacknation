@@ -6,7 +6,7 @@ class ApplicantsController < ApplicationController
   def index
     @agerange = ['18-25', '26-30', '31-40', '40++']
     @positions = Position.all
-    @language = Language.all
+    @languages = Language.all
     @statuses = Status.all
     @applicants = Applicant.all
   end

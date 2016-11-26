@@ -39,11 +39,15 @@
               <thead>
                 <tr>
                   <th>Name</th>
+                  <th>Position Applied</th>
                   <th>Age</th>
                   <th>Location</th>
                   <th>Gpa</th>
                   <th>Exp</th>
-                  <th colspan="3"></th>
+                  <th>Status</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
                 </tr>
               </thead>
 
@@ -51,10 +55,12 @@
                 <% @applicants.each do |applicant| %>
                   <tr>
                     <td><%= applicant.name %></td>
+                    <td><%= applicant.position.name %></td>
                     <td><%= applicant.age %></td>
                     <td><%= applicant.location %></td>
                     <td><%= applicant.gpa %></td>
                     <td><%= applicant.exp %></td>
+                    <td><%= applicant.status.name %></td>
                     <td><%= link_to 'Show', applicant %></td>
                     <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
                     <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -87,7 +93,7 @@
                 <label for="agerange">Age range</label>
                 <% if !@agerange.blank? %>
                   <% @agerange.each_with_index do |v, k| %>
-                  <div class="radio">
+                  <div class="checkbox">
                     <label><input type="checkbox" name="agerange" value="<%= k %>"> <%= v %></label>
                   </div>
                   <% end %>
@@ -97,8 +103,8 @@
                 <label for="position">Position applied</label>
                 <% if !@positions.blank? %>
                 <% @positions.each_with_index do |v, k| %>
-                <div class="radio">
-                  <label><input type="checkbox" name="position" value="<%= k %>"><%= v %></label>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="position" value="<%= k %>"> <%= v.name %></label>
                 </div>
                 <% end %>
                 <% end %>
@@ -108,7 +114,7 @@
                 <% if !@languages.blank? %>
                 <% @languages.each_with_index do |v, k| %>
                 <div class="checkbox">
-                  <label><input type="checkbox" name="languages" value="<%= k %>"><%= v %></label>
+                  <label><input type="checkbox" name="languages" value="<%= k %>"> <%= v.name %></label>
                 </div>
                 <% end %>
                 <% end %>
@@ -118,7 +124,7 @@
                 <% if !@statuses.blank? %>
                 <% @statuses.each_with_index do |v, k| %>
                 <div class="checkbox">
-                  <label><input type="checkbox" name="languages" value="<%= k %>"><%= v %></label>
+                  <label><input type="checkbox" name="languages" value="<%= k %>"> <%= v.name %></label>
                 </div>
                 <% end %>
                 <% end %>
