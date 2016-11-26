@@ -5,11 +5,17 @@ class LanguagesController < ApplicationController
   # GET /languages.json
   def index
     @languages = Language.all
+    len = Language.all.count
+    @counts = Array.new(len)
+    (1..len).each do |i|
+        @counts[i-1] = Language.find(i).applicant.count
+    end
   end
 
   # GET /languages/1
   # GET /languages/1.json
   def show
+    @applicants = @language.applicant
   end
 
   # GET /languages/new
