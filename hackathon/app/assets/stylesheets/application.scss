@@ -49,7 +49,8 @@ a:hover {
 }
 
 .title {
-     font-family: 'Timeburner';
+     font-family: 'Montserrat';
+     font-size: 8 em;
  }
 
 h1, h2, h3, h5 {
@@ -71,22 +72,23 @@ h1, h2, h3, h5 {
 }
 
 .intro-section {
-    height: 100%;
-    padding-bottom: 550px;
+    min-height: 100%;
+    padding-bottom: 200px;
     text-align: center;
     background: #ecf0f5;
 }
 
 .services-section {
     height: 100%;
-    padding-bottom: 550px;
+    padding-bottom: 150px;
     text-align: center;
     background: #fff;
 }
 
 .contact-section {
     height: 100%;
-    padding-bottom: 550px;
+    padding-top: 5px !important;
+    padding-bottom: 200px;
     text-align: center;
     background: #eee;
 }
