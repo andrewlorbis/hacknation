@@ -59,16 +59,10 @@
                     <td><%= applicant.location %></td>
                     <td><%= applicant.gpa %></td>
                     <td><%= applicant.exp %></td>
-<<<<<<< HEAD
                     <td><%= applicant.status.name %></td>
-                    <td><%= link_to 'Show', applicant %></td>
-                    <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
-                    <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-=======
                     <td><center><%= link_to applicant do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to edit_applicant_path(applicant) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
->>>>>>> 55acee2c1d401ae3f7d283e97da1fcc4199fd098
                   </tr>
                 <% end %>
               </tbody>
