@@ -28,14 +28,15 @@
               <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Developers</th>
                 </tr>
               </thead>
 
               <tbody>
-                  <% @languages.each do |language| %>
+                  <% @languages.each_with_index do |language, k| %>
                     <tr>
                       <td><%= language.name %></td>
-                      <!--Removed show edit destroy, does not make sense to apply here-->
+                      <td><%= @counts[k] %></td>
                     </tr>
                 <% end %>
               </tbody>
