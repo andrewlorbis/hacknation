@@ -1,3 +1,3 @@
 class Recruiter < ActiveRecord::Base
-	belongs_to :applicant
+	has_many :applicant
 end
