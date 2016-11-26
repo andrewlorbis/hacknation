@@ -1,35 +1,74 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Applicants</h1>
+<div class="row">
+  <div class="col-md-12">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Applicant Demographics</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-12">
+            insert visualization here
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Location</th>
-      <th>Gpa</th>
-      <th>Exp</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-12">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">View Potential Applicants</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="box-body table-responsive">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-bordered table-hover dataTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Location</th>
+                  <th>Gpa</th>
+                  <th>Exp</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
 
-  <tbody>
-    <% @applicants.each do |applicant| %>
-      <tr>
-        <td><%= applicant.name %></td>
-        <td><%= applicant.age %></td>
-        <td><%= applicant.location %></td>
-        <td><%= applicant.gpa %></td>
-        <td><%= applicant.exp %></td>
-        <td><%= link_to 'Show', applicant %></td>
-        <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
-        <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Applicant', new_applicant_path %>
+              <tbody>
+                <% @applicants.each do |applicant| %>
+                  <tr>
+                    <td><%= applicant.name %></td>
+                    <td><%= applicant.age %></td>
+                    <td><%= applicant.location %></td>
+                    <td><%= applicant.gpa %></td>
+                    <td><%= applicant.exp %></td>
+                    <td><%= link_to 'Show', applicant %></td>
+                    <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+                    <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="box-footer">
+        <br>
+        <%= button_to 'New Applicant', new_applicant_path, class: 'btn btn-primary', type: 'button', method: :get %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,3 +21,32 @@
  @import "rails_bootstrap_forms";
  @import "bootstrap";
  @import "bootstrap-sprockets";
+
+//Custom fonts
+@font-face {
+        font-family: 'TimeBurner';
+        src: url('/assets/timeburnernormal');
+        }
+
+@font-face {
+        font-family: 'Montserrat';
+        src: url('/assets/Montserrat-Regular');
+        }
+
+@font-face {
+        font-family: 'OpenSans';
+        src: url('/assets/OpenSans-Regular');
+        }
+
+//#6db33f = Cognizant Green
+
+body,a,span {
+    font-family: 'OpenSans';
+}
+ .title {
+     font-family: 'Timeburner';
+ }
+
+h1, h2, h3, h5 {
+    font-family: 'Montserrat';
+}
