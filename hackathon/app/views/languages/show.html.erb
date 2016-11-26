@@ -40,7 +40,7 @@
                         <td><%= applicant.location %></td>
                         <td><%= applicant.gpa %></td>
                         <td><%= applicant.exp %></td>
-                        <td><%= applicant.status.name %></td>
+                        <td><%= applicant.statuses.name %></td>
                         <td><center><%= link_to applicant do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
                         <td><center><%= link_to edit_applicant_path(applicant) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
                         <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure to remove this applicant?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
