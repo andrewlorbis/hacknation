@@ -15,12 +15,12 @@
  */
 @import "bootstrap-sprockets";
 
- @import "AdminLTE/AdminLTE";
- @import "AdminLTE/skins/skin-blue";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
 
- @import "rails_bootstrap_forms";
- @import "bootstrap";
- @import "bootstrap-sprockets";
+@import "rails_bootstrap_forms";
+@import "bootstrap";
+@import "bootstrap-sprockets";
 
 //Custom fonts
 @font-face {
@@ -38,13 +38,14 @@
         src: url('/assets/OpenSans-Regular');
         }
 
-body,a {
-    font-family: 'OpenSans';
+body{
+  font-family: 'Helvetica', 'OpenSans';
 }
- .title {
-     font-family: 'Timeburner';
- }
 
-h3,h5 {
-    font-family: 'Montserrat';
+.title {
+  font-family: 'Timeburner';
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat';
 }
