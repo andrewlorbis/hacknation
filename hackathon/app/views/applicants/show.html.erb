@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Position applied:</strong>
+  <%= @applicant.position.name %>
+</p>
+
+<p>
   <strong>Age:</strong>
   <%= @applicant.age %>
 </p>
@@ -16,13 +21,18 @@
 </p>
 
 <p>
-  <strong>Gpa:</strong>
+  <strong>GPA:</strong>
   <%= @applicant.gpa %>
 </p>
 
 <p>
-  <strong>Exp:</strong>
+  <strong>Years of Experience:</strong>
   <%= @applicant.exp %>
+</p>
+
+<p>
+  <strong>Application status:</strong>
+  <%= @applicant.status.name %>
 </p>
 
 <%= link_to 'Edit', edit_applicant_path(@applicant) %> |
