@@ -1,37 +1,90 @@
-<section class="content-header">
-  <center>
-      <h1 class="anatome-logo title animated fadeInDown">
-        a n a t o <b>M E</b><br>
-        <small>Breaking learning barriers through technology</small>
-      </h1>
-  </center>
-  <hr style="border-top:1px solid #71B139; !important">
-</section>
-<!-- Main content -->
-<div class ="row">
-<section class="content">
-    <div class="col-md-4 col-md-offset-4">
-      <!-- Widget: user widget style 1 -->
-      <div class="box box-widget widget-user">
-        <!-- Add the bg color to the header using any of the bg-* classes -->
-        <div class="widget-user-header bg-teal" style="background-color:#4cb3cf!important;">
-          <center><h3 class="widget-user-username">Gestures</h3>
-          <h5 class="widget-user-desc">Short Application Description</h5></center>
-        </div>
-        <div class="box-body">
-            You don't want no problem want no problem with me (bih).
-            You don't want no problem want no problem with me (hahaha).
-            You don't want no problem want no problem with me.
-            You don't want no problem want no problem with me.
-            <br>
-            <center>
-                <%= link_to "Start", applicants_path, :class => "btn bg-green margin", :style=> "background-color:#71B139!important;" %>
-            </center>
-        </div>
-    </div>
-      <!-- /.widget-user -->
-    </div>
-</div> <!--row-->
+<section class="content-header" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <center>
+        <h1 class="anatome-logo title animated fadeInDown">
+          a n a t o <b>M E</b><br>
+          <small>Breaking learning barriers through technology</small>
+        </h1>
+    </center>
+      <nav class="navbar navbar-default navbar-fixed-bottom navbar-start navbar-title" role="navigation">
+                  <div class="container">
+                      <div class="navbar-header page-scroll">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                          <!--
+                          <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                          -->
+                      </div>
+                      <center>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse navbar-ex1-collapse">
+                          <center>
+                          <ul class="nav navbar-nav navbar-nav-title">
+                              <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                              <li class="hidden">
+                                  <a class="page-scroll" href="#page-top"></a>
+                              </li>
+                              <li>
+                                  <a class="page-scroll" href="#intro"><i class="fa fa-snowflake-o fa-2x" aria-hidden="true"></i><br>Home</a>
+                              </li>
+                              <li>
+                                  <a class="page-scroll" href="#services"><i class="fa fa-star fa-2x" aria-hidden="true"></i><br>About</a>
+                              </li>
+                              <li>
+                                  <a class="page-scroll" href="#contact"><i class="fa fa-camera-retro fa-2x" aria-hidden="true"></i><br>Gallery</a>
+                              </li>
 
-</div>
-<!--row-->
+                          </ul>
+                      </center>
+                      </div>
+                  </center>
+                      <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container -->
+      </nav>
+      <!-- Intro Section -->
+      <section id="intro" class="intro-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1>Scrolling Nav</h1>
+                      <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+                      <br>
+                      This be the link to Dashboard ah<br>
+                      <%= link_to "View", applicants_path %>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1>Services Section</h1>
+                  </div>
+                  Lorem ipsum keme keme keme 48 years antibiotic kasi ano ng at bakit ng sa conalei
+                  kabog at at bakit ang tungril mashumers na ang tetetet bokot waz keme keme kabog jutay
+                  bakit na ang sangkatuts kabog lorem ipsum keme keme Gino kemerloo ano ganda lang.
+              </div>
+          </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1>Contact Section</h1>
+                  </div>
+                  Lorem ipsum keme keme keme 48 years antibiotic kasi ano ng at bakit ng sa conalei
+                  kabog at at bakit ang tungril mashumers na ang tetetet bokot waz keme keme kabog jutay
+                  bakit na ang sangkatuts kabog lorem ipsum keme keme Gino kemerloo ano ganda lang.
+              </div>
+          </div>
+      </section>
+  </section>
