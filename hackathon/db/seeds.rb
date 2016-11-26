@@ -10,6 +10,7 @@ status = ['responded', 'interview', 'test', 'final interview', 'job offer']
 position = ['Software Engineer', 'Software Developer', 'Project Manager', 'Lead Developer', 'Software Tester', 'IT Consultant', 'Nurse', 'Customer Support', 'Factory Worker', 'Call Center Agent', 'Cloud Consultant', 'Customer Service Representative', 'Unit Maintenance', 'Technical Lead', 'Supervisor']
 language = ['C', 'C++', 'Java', 'Assembly', 'Python', 'Assembly', 'Perl', 'Ruby', 'Fortran', 'Pascal', 'BASIC', 'Swift', 'LISP', 'Prolog', 'Scheme'] 
 
+
 for i in status
 	Status.create(name: i)
 end
@@ -32,6 +33,8 @@ recruiter = Recruiter.all
 
 for i in 1...100
 	a = Applicant.create(name: Faker::Name.name, 
+						 email: Faker::Internet.email,
+						 school: Faker::University.name,
 					 	 age: rand(17..61), 
 					     location: Faker::Address.secondary_address + " " + Faker::Address.street_name + " " + Faker::Address.city,
 					     gpa: rand.round(2) * (5 - 1) + 1, 
