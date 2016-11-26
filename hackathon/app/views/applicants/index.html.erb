@@ -22,7 +22,7 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-xs-12 col-md-9">
     <div class="box box-primary">
       <div class="box-header with-border">
         <h3 class="box-title">View Potential Applicants</h3>
@@ -34,7 +34,7 @@
       <div class="box-body table-responsive">
         <div class="row">
           <div class="col-md-12">
-            <table class="table table-bordered table-hover dataTable">
+            <table class="table table-bordered table-hover" id="appTable">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -69,6 +69,67 @@
       <div class="box-footer">
         <br>
         <%= button_to 'New Applicant', new_applicant_path, class: 'btn btn-primary', type: 'button', method: :get %>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Filter Applicants</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form" id="appForm">
+              <div class="form-group">
+                <label for="agerange">Age range</label>
+                <% if !@agerange.blank? %>
+                  <% @agerange.each_with_index do |v, k| %>
+                  <div class="radio">
+                    <label><input type="checkbox" name="agerange" value="<%= k %>"> <%= v %></label>
+                  </div>
+                  <% end %>
+                <% end %>
+              </div>
+              <div class="form-group">
+                <label for="position">Position applied</label>
+                <% if !@positions.blank? %>
+                <% @positions.each_with_index do |v, k| %>
+                <div class="radio">
+                  <label><input type="checkbox" name="position" value="<%= k %>"><%= v %></label>
+                </div>
+                <% end %>
+                <% end %>
+              </div>
+              <div class="form-group">
+                <label for="language">Programming skills</label>
+                <% if !@languages.blank? %>
+                <% @languages.each_with_index do |v, k| %>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="languages" value="<%= k %>"><%= v %></label>
+                </div>
+                <% end %>
+                <% end %>
+              </div>
+              <div class="form-group">
+                <label for="status">Recruitment status</label>
+                <% if !@statuses.blank? %>
+                <% @statuses.each_with_index do |v, k| %>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="languages" value="<%= k %>"><%= v %></label>
+                </div>
+                <% end %>
+                <% end %>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="box-footer">
+        <%= button_to 'Apply Filters', new_applicant_path, class: 'btn btn-primary', type: 'button', method: :get %>
       </div>
     </div>
   </div>

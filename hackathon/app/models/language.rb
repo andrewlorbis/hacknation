@@ -1,3 +1,4 @@
 class Language < ActiveRecord::Base
-	belongs_to :applicant
+	has_many :applicant_languages
+	has_many :applicant, through: :applicant_languages
 end

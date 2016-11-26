@@ -4,6 +4,10 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
+    @agerange = ['18-25', '26-30', '31-40', '40++']
+    @positions = Position.all
+    @language = Language.all
+    @statuses = Status.all
     @applicants = Applicant.all
   end
 
