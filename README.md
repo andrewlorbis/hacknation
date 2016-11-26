@@ -1,6 +1,17 @@
 ## hacknation
 Application for Cognizant Hacknation
 
+## DB Setup
+```
+git pull origin master
+bundle install
+sudo service postgresql start
+sudo -su postgre psql
+CREATE ROLE hacknation WITH LOGIN CREATEDB PASSWORD 'hacknation';
+bundle exec rake db:create db:migrate db:seed
+bundle exec rails s
+```
+
 ### AdminLTE
 Add this line to your application's Gemfile:
 ```bash
