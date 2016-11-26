@@ -47,7 +47,11 @@
       </section> -->
 
       <!-- Main content -->
+      <% if current_page?('/') %>
+      <section class="content content-landing">
+      <% else %>
       <section class="content">
+      <% end %>
         <% if notice %>
           <div class="alert alert-success alert-dismissable">
             <i class="fa fa-check"></i>
