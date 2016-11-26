@@ -4,47 +4,57 @@
   <div class="col-xs-12 col-md-8">
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Applicant's Information</h3>
+        <h3 class="box-title">Applicant Information</h3>
       </div>
       <div class="box-body">
         <div class="row">
-            <div class="col-xs-10 col-md-4 text-center">
-              <br><br>
-                <%= image_tag("empty-profile.png", alt: "Edit Entry", class: "img-responsive")%>
-            </div>
-            <div class="col-xs-12 col-md-8">
-              <h3>
-                <strong><%= @applicant.name %></strong>
-              </h3>
-              <br>
-              <h5 class="inline-block">
-                <strong>Age:</strong>
-              </h5>
-              <%= @applicant.age %>
-              <br>
-              <h5 class="inline-block">
-                <strong>Location:</strong>
-              </h5>
-              <%= @applicant.location %>
-              <br>
-              <h5 class="inline-block">
-                <strong>GPA:</strong>
-              </h5>
-              <%= @applicant.gpa %>
-              <br>
-              <h5 class="inline-block">
-                <strong>Years of Experience:</strong>
-              </h5>
-              <%= @applicant.exp %>
-              <br>
-              <h5 class="inline-block">
-                  <strong>Application Status:</strong>
-              </h5>
-              <%= @applicant.statuses.name %>
-              <br>
-              <h4><%= link_to 'Edit', edit_applicant_path(@applicant) %> |
-              <%= link_to 'Back', applicants_path %> </h4>
-            </div>
+          <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 text-center">
+            <br>
+            <%= image_tag("empty-profile.png", alt: "Edit Entry", class: "img-responsive")%>
+            <br>
+            <h2 id="appScore"><%= @applicant.score %>%</h2>
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <h3>
+              <strong><%= @applicant.name %></strong>
+            </h3>
+            <br>
+            <h5 class="inline-block">
+              <strong>Age:</strong>
+            </h5>
+            <%= @applicant.age %>
+            <br>
+            <h5 class="inline-block">
+              <strong>Location:</strong>
+            </h5>
+            <%= @applicant.location %>
+            <br>
+            <h5 class="inline-block">
+              <strong>GPA:</strong>
+            </h5>
+            <%= @applicant.gpa %>
+            <br>
+            <h5 class="inline-block">
+              <strong>Years of Experience:</strong>
+            </h5>
+            <%= @applicant.exp %>
+            <br>
+            <h5 class="inline-block">
+                <strong>Application Status:</strong>
+            </h5>
+            <%= @applicant.statuses.last.name %>
+            <br><br>
+            <h4><%= link_to 'Edit', edit_applicant_path(@applicant), class: 'btn btn-warning' %>
+            <%= link_to 'Back', applicants_path, class: 'btn btn-info' %> </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- <h4 class="box-title">Fitness Score</h4>
+            <p>
+              <%= @applicant.score %>
+            </p> -->
+          </div>
         </div>
       </div>
     </div>
@@ -62,5 +72,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div
 </div>
