@@ -1,28 +1,35 @@
-== README
+This is the README for the Ruby on Rails application CogniCop.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+VERSIONS
+Ruby version: ruby 2.2.0p0
+Rails version: 4.2.5
 
-Things you may want to cover:
+SYSTEM DEPENDENCIES
+Below are the gems needed for the project to run and display correctly.
 
-* Ruby version
+https://github.com/nicolas-besnard/adminlte2-rails
+This gem is the layout for the application.
+    gem 'adminlte2-rails'
 
-* System dependencies
+To make the adminlte2-rails work, we also need to install the following gems:
+    gem 'bootstrap_form'
+    gem 'bootstrap-sass'
 
-* Configuration
+This gem provides a nice layout to tables.
+    gem 'jquery-datatables-rails', '~> 3.4.0'
 
-* Database creation
+https://github.com/michelson/lazy_high_charts
+This gem provides a simple and extremely flexible way to use HighCharts from ruby code. Tested on Ruby on Rails, Sinatra and Nanoc, but it should work with others too.
+    gem 'lazy_high_charts'
 
-* Database initialization
+https://github.com/iblue/d3-rails
+D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG and CSS.
+    gem 'd3-rails'
 
-* How to run the test suite
+This gem is used for generating test data.
+    gem 'faker'
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+DATABASE INITIALIZATION
+    To initialize the database, run the following command:
+        bundle exec rake db:migrate
+        bundle exec rake db:reset

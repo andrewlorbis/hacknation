@@ -26,19 +26,19 @@
 
 //Custom fonts
 @font-face {
-        font-family: 'TimeBurner';
-        src: url('/assets/timeburnernormal');
-        }
+  font-family: 'TimeBurner';
+  src: url('/assets/timeburnernormal');
+}
 
 @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/Montserrat-Regular');
-        }
+  font-family: 'Montserrat';
+  src: url('/assets/Montserrat-Regular');
+}
 
 @font-face {
-        font-family: 'OpenSans';
-        src: url('/assets/OpenSans-Regular');
-        }
+  font-family: 'OpenSans';
+  src: url('/assets/OpenSans-Regular');
+}
 
 .turbolinks-progress-bar {
   height: 2px;
@@ -47,78 +47,91 @@
 }
 
 .navbar-dashboard, .logo {
-    background-color: #4cb3cf !important;
+  background-color: #4cb3cf !important;
 }
 
 body,a,span {
-    font-family: 'OpenSans';
+  font-family: 'OpenSans';
 }
 
 a:hover {
-    background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.1);
 }
 
-a:visited{color:inherit}
+a.btn.btn-*:visited{
+  color: white !important;
+}
 
 .title {
-     font-family: 'Montserrat';
-     font-size: 8 em;
- }
+  font-family: 'Montserrat';
+  font-size: 8em;
+}
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Montserrat';
+  font-family: 'Montserrat';
 }
 
 .inline-block {
-    display:inline-block;
+  display:inline-block;
 }
 
 // Landing Page Customizations
 @media(min-width:767px) {
-    .navbar-start {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
+  .navbar-start {
+    padding: 20px 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
 
-    .top-nav-collapse {
-        padding: 0;
-    }
+  .top-nav-collapse {
+    padding: 0;
+  }
 }
 
 .intro-section {
-    min-height: 100%;
-    padding-bottom: 200px;
-    text-align: center;
-    background: #ecf0f5;
+  min-height: 100%;
+  padding-bottom: 200px;
+  text-align: center;
+  background: #ecf0f5;
 }
 
 .login-checkbox-move {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .services-section {
-    height: 100%;
-    padding-bottom: 150px;
-    text-align: center;
-    background: #fff;
+  height: 100%;
+  padding-bottom: 150px;
+  text-align: center;
+  background: #fff;
 }
 
 .contact-section {
-    height: 100%;
-    padding-top: 5px !important;
-    padding-bottom: 200px;
-    text-align: center;
-    background: #eee;
+  height: 100%;
+  padding-top: 5px !important;
+  padding-bottom: 200px;
+  text-align: center;
+  background: #eee;
 }
 
 .navbar-nav-title{
-    display: inline-block;
-    float:none;
-    vertical-align: top;
+  display: inline-block;
+  float:none;
+  vertical-align: top;
 }
+
 .navbar-title {
-    background-color: rgba(255,0,255,0);
-    border:0 !important;
+  background-color: rgba(255,0,255,0);
+  border: 0 !important;
+}
+
+//delay css
+.delay
+{
+animation-delay: .5s;
+}
+.delay2
+{
+animation-delay: 1s;
 }
