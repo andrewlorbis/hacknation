@@ -74,6 +74,21 @@
 	min-height: 100%;
 }
 
+.container-login {
+	background-image: url('/assets/homebg');
+	background-repeat: none;
+	background-attachment: scroll;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 100%;
+    padding-bottom: 100px !important;
+}
+
 .content-landing{
 	padding: 0 !important;
 }
