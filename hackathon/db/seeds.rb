@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-status = ['responded', 'interview', 'test', 'final interview', 'job offer']
+status = ['Responded', 'Initial interview', 'Test', 'Final interview', 'Job offer']
 position = ['Software Engineer', 'Software Developer', 'Project Manager', 'Lead Developer', 'Software Tester', 'IT Consultant', 'Nurse', 'Customer Support', 'Factory Worker', 'Cloud Consultant', 'Customer Service Representative', 'Unit Maintenance', 'Technical Lead', 'Supervisor']
 language = ['C', 'C++', 'Java', 'Assembly', 'Python', 'Assembly', 'Perl', 'Ruby', 'Fortran', 'Pascal', 'BASIC', 'Swift', 'LISP', 'Prolog', 'Scheme']
 
