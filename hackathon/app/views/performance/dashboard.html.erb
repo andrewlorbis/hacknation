@@ -80,7 +80,7 @@
       <div class="box-body">
         <div class="row">
           <div class="col-md-12">
-            <%= high_chart("some_id", @chartday) %>
+              <%= high_chart("some_id", @chartday) %>
           </div>
         </div>
       </div>
@@ -136,7 +136,8 @@
       </div>
     </div>
 
-    <div class="box box-success">
+
+    <div class="box box-warning">
       <div class="box-header with-border">
         <h3 class="box-title">Top Hirees</h3>
         <div class="box-tools pull-right">
@@ -145,40 +146,59 @@
         </div>
       </div>
       <div class="box-body">
-        <div class="row">
-          <div class="col-md-12">
             <!-- <p class="text-center">Goal Completion</p> -->
-            <div class="progress-group">
-                <span><b>Andrew Lorbis</b><br>
-                    Rating: 86.45
-                </span>
-            </div>
-            <div class="progress-group">
-              <span class="progress-text">CSRs</span>
-              <span class="progress-number"><b>310</b>/400</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-red" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="progress-group">
-              <span class="progress-text">Nurses</span>
-              <span class="progress-number"><b>480</b>/800</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-green" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="progress-group">
-              <span class="progress-text">Project Managers</span>
-              <span class="progress-number"><b>250</b>/500</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <ul class="products-list product-list-in-box">
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Franco Ray</a><br>
+                      Rating: 86.45 <br>
+                      <span class ="product-description">
+                          Applied for Cloud Consultant
+                      </span>
+                </div>
+              </li>
+              <!-- /.item -->
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Andrew Lorbs</a><br>
+                      Rating: 83.00 <br>
+                      <span class ="product-description">
+                          Applied for IT Consultant
+                      </span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Earl Branze</a><br>
+                      Rating: 81.27 <br>
+                      <span class ="product-description">
+                          Applied for Project Manager
+                      </span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Robert Basi</a><br>
+                      Rating: 80.80 <br>
+                      <span class ="product-description">
+                          Applied for Customer Service Representative
+                      </span>
+                </div>
+              </li>
+              <!-- /.item -->
+            </ul>
       </div>
     </div>
 
@@ -191,43 +211,59 @@
         </div>
       </div>
       <div class="box-body">
-        <div class="row">
-          <div class="col-md-12">
             <!-- <p class="text-center">Goal Completion</p> -->
-            <div class="progress-group">
-              <span class="progress-text">Software Engineers</span>
-              <span class="progress-number"><b>160</b>/200</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="progress-group">
-              <span class="progress-text">CSRs</span>
-              <span class="progress-number"><b>310</b>/400</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-red" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="progress-group">
-              <span class="progress-text">Nurses</span>
-              <span class="progress-number"><b>480</b>/800</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-green" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="progress-group">
-              <span class="progress-text">Project Managers</span>
-              <span class="progress-number"><b>250</b>/500</span>
-
-              <div class="progress sm">
-                <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <ul class="products-list product-list-in-box">
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Alek Odovin
+                    <span class="label label-info pull-right">10</span></a>
+                      <span class="product-description">
+                        10 New recruits of status 'job offer' and above
+                      </span>
+                </div>
+              </li>
+              <!-- /.item -->
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Victor Delamonte
+                    <span class="label label-danger pull-right">8</span></a>
+                      <span class="product-description">
+                        8 New recruits from Tondo, Manila
+                      </span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Paul Phoenix
+                    <span class="label label-info pull-right">8</span></a>
+                      <span class="product-description">
+                        6 New recruits of status 'job offer' and above
+                      </span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="product-img">
+                    <%= image_tag("empty-profile.png", size:"50x50", alt: "Edit Entry", class: "img-responsive")%>
+                </div>
+                <div class="product-info">
+                  <a href="javascript:void(0)" class="product-title">Franz Ferdinand
+                    <span class="label label-success pull-right">5</span></a>
+                      <span class="product-description">
+                        2 New recruits for the past 3 days
+                      </span>
+                </div>
+              </li>
+              <!-- /.item -->
+            </ul>
       </div>
     </div>
 
