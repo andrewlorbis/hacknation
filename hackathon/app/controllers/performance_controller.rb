@@ -29,7 +29,7 @@ class PerformanceController < ApplicationController
         {title: {text: "no of applicants"}, plotLines: [{value: 0, width: 1, color: '#808080'}] }
       ]
       f.legend({layout: 'horizontal'})
-      # f.plotOptions({line: {marker: "{enabled: false}", lineWidth: 1}})
+      f.plotOptions({line: {marker: "{enabled: false}", lineWidth: 1}})
       # f.chart({defaultSeriesType: "column"})
     end
 
