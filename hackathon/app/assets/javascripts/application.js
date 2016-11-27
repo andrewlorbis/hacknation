@@ -43,3 +43,6 @@ $(function() {
         event.preventDefault();
     });
 });
+
+//jquery for WOW.js
+wow = new WOW().init();
