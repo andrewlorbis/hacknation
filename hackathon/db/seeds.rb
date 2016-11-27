@@ -31,12 +31,12 @@ for i in 1...20
 end
 recruiter = Recruiter.all
 
-for i in 1...100
+for i in 1...1000
 
-	a = Applicant.create(name: Faker::Name.name, 
+	a = Applicant.create(name: Faker::Name.name,
 						 email: Faker::Internet.email,
 						 school: Faker::University.name,
-					 	 age: rand(17..61), 
+					 	 age: rand(17..61),
 					     location: Faker::Address.secondary_address + " " + Faker::Address.street_name + " " + Faker::Address.city,
 					     gpa: rand.round(2) * (5 - 1) + 1,
 					     exp: rand.round(1) * (10 - 1) + 1
