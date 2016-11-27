@@ -8,7 +8,7 @@ class ApplicantsController < ApplicationController
     @positions = Position.all
     @languages = Language.all
     @statuses = Status.all
-    @applicants = Applicant.all    
+    @applicants = Applicant.all
 
     # @chart1 = LazyHighCharts::HighChart.new('graph') do |f|
     #   f.title({text: 'Stratificatied<br>Applicant<br>Demographics', align: 'center', verticalAlign: 'middle', y: 40})
@@ -20,7 +20,7 @@ class ApplicantsController < ApplicationController
     @chart1 = LazyHighCharts::HighChart.new('graph') do |f|
         f.chart({:defaultSeriesType=>"pie", :margin=> [50, 0, 0, 0]})
         #f.title({:text => ""})
-        f.subtitle({:text => 'Stratificatied<br>Applicant<br>Demographics'})
+        # f.subtitle({:text => 'Stratificatied<br>Applicant<br>Demographics'})
         f.plotOptions ({
             pie: {
               dataLabels: {
@@ -36,10 +36,10 @@ class ApplicantsController < ApplicationController
         )
         f.series({
           :type => "pie",
-          :name => "2008",
-          :size => "45%",
-          :innerSize => "20%",
-          :data => [{ :name => @positions[1].name, :y => 44.2, :color => "#4572A7" },{ :name => @positions[2].name, :y => 46.6, :color => "#AA4643" },{ :name => @positions[3].name, :y => 3.1, :color => "#89A54E" },{ :name => @positions[4].name, :y => 2.7, :color => "#80699B" },{ :name => @positions[5].name, :y => 2.3, :color => "#3D96AE" },{ :name => @positions[6].name, :y => 0.4, :color => "#DB843D" }],}
+          :name => "2016",
+          :size => "150%",
+          :innerSize => "30%",
+          :data => [{ :name => @positions[1].name, :y => 44.2, :color => "#4572A7" },{ :name => @positions[2].name, :y => 46.6, :color => "#AA4643" },{ :name => @positions[3].name, :y => 3.1, :color => "#89A54E" },{ :name => @positions[4].name, :y => 2.7, :color => "#80699B" },{ :name => @positions[5].name, :y => 1.35, :color => "#3D96AE" },{ :name => @positions[6].name, :y => 1.35, :color => "#DB843D" }],}
         )
     end
 
