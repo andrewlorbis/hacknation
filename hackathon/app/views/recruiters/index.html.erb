@@ -24,11 +24,12 @@
       <div class="box-body">
         <div class="row">
           <div class="col-md-12">
-            <table class="table table-bordered table-hover dataTable">
+            <table class="table table-bordered table-hover dataTable" id="referTable">
               <thead>
                 <tr>
                     <th>Name</th>
                     <th>No of Referrals</th>
+                    <th>Performance Rating</th>
                     <th style="width:5%;">Show</th>
                     <th style="width:4%;">Edit</th>
                     <th style="width:5%;">Delete</th>
@@ -40,6 +41,7 @@
                       <tr>
                         <td><%= recruiter.name %></td>
                         <td><%= @counts[k] %></td>
+                        <td><%= recruiter.rate.round(2) %></td>
                       <td><center><%= link_to recruiter do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
                       <td><center><%= link_to edit_recruiter_path(recruiter) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
                       <td><center><%= link_to recruiter, method: :delete, data: { confirm: 'Are you sure?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>

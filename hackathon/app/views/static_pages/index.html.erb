@@ -1,150 +1,153 @@
 <section class="content-header" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-      <nav class="navbar navbar-default navbar-fixed-bottom navbar-start navbar-title" role="navigation">
-                  <div class="container">
-                      <div class="navbar-header page-scroll">
-                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                              <span class="sr-only">Toggle navigation</span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                          </button>
-                          <!--
-                          <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-                          -->
-                      </div>
-                      <center>
-                      <!-- Collect the nav links, forms, and other content for toggling -->
-                      <div class="collapse navbar-collapse navbar-ex1-collapse">
-                          <center>
-                          <ul class="nav navbar-nav navbar-nav-title">
-                              <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                              <li>
-                                  <a class="page-scroll" href="#intro"><br>Home</a>
-                              </li>
-                              <li>
-                                  <a class="page-scroll" href="#services"><br>About</a>
-                              </li>
-                              <li>
-                                  <a class="page-scroll" href="#contact"><br>Features</a>
-                              </li>
+  <nav class="navbar navbar-default navbar-fixed-bottom navbar-start navbar-title" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--
+        <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+      -->
+    </div>
+    <center>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <center>
+          <ul class="nav navbar-nav navbar-nav-title">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li>
+              <a class="page-scroll" href="#intro"><br>Home</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#services"><br>About</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#contact"><br>Features</a>
+            </li>
 
-                          </ul>
-                      </center>
-                      </div>
-                  </center>
-                      <!-- /.navbar-collapse -->
-                  </div>
-                  <!-- /.container -->
-      </nav>
-      <!-- Intro Section -->
-      <div class="row introrow">
-        <div class="col-lg-12">
-          <section id="intro" class="intro-section" style="padding-bottom: 0px;">
-              <div class="container container-intro">
-                  <div class="row">
-                      <div class="col-lg-12" style="padding-top:10%; padding-bottom:40%;">
-                      <center>
-                        <h1 class="title animated fadeInDown">
-                          Cogni<b>C</b><%= image_tag("logo.png", :alt => "cognicoplogo",width: '60', height: '60', id: "logotitle") %><b>P</b><br>
-                        </h1>
-                        <h2 class="titlesub">
-                          <small class="titlesub">With CogniCOP, we don't just track. <b>We capture.</b></small>
-                        </h2>
-                        <h4>
-                          <br> <br>
-                          <b>cognizant</b> (adjective)  <br>
-                          <i>\ˈkäg-nə-zənt\</i> <br>
-                          <b><i>knowledgeable of something especially through personal experience</i></b>
-                        </h4>
-                      </center>
-                      </div>
-                  </div>
-              </div>
-          </section>
+          </ul>
+        </center>
+      </div>
+    </center>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- Intro Section -->
+<div class="row introrow">
+  <div class="col-lg-12">
+    <section id="intro" class="intro-section" style="padding-bottom: 0px;">
+      <div class="container container-intro">
+        <div class="row">
+          <div class="col-lg-12" style="padding-top:10%; padding-bottom:40%;">
+            <center>
+              <h1 class="title animated fadeInDown">
+                Cogni<b>C</b><%= image_tag("logo.png", :alt => "cognicoplogo",width: '60', height: '60', id: "logotitle") %><b>P</b><br>
+              </h1>
+              <h2 class="titlesub">
+                <small class="titlesub">With CogniCOP, we don't just track. <b>We capture.</b></small>
+              </h2>
+              <h4>
+                <br> <br>
+                <b>cognizant</b> (adjective)  <br>
+                <i>\ˈkäg-nə-zənt\</i> <br>
+                <b><i>knowledgeable of something especially through personal experience</i></b>
+              </h4>
+            </center>
+          </div>
         </div>
       </div>
-      <!-- Services Section -->
-      <section id="services" class="services-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <h1 class = "home-sec-head">About Cogni<b>Cop</b></h1>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-4 aboutcol">
-                  <%= image_tag("home-find.png", :alt => "find", id: "aboutimg") %>
-                  <h3>Find a fit</h3>
-                  <p><i>By computing an applicant's fit by measuring his/her skills, experiences, and background against the company's needs, CogniCop can tell you whether an applicant is fit for the company and the role he/she could be most effective.</i></p>
-                </div>
-                <div class="col-lg-4 aboutcol">
-                  <%= image_tag("home-progress.png", :alt => "progress", id: "aboutimg") %>
-                  <h3>Quantify quality</h3>
-                  <p><i>Given the company's key performance indices, a recruiter's ratings could be displayed. By providing a graphic view of data, CogniCop can show a recruiter's performance over a desired time-frame, as an individual and against other recruiters</i></p>
-                </div>
-                <div class="col-lg-4 aboutcol">
-                  <%= image_tag("home-analyze.png", :alt => "analyze", id: "aboutimg") %>
-                  <h3>Analyze Resources</h3>
-                  <p><i>As a tool for business intelligence, CogniCop provides its users with graphical representation of data with regards to resources - from employee demographics, to the shortage and/or abundance of company talent.</i></p>
-                </div>
-              </div>
-          </div>
-      </section>
+    </section>
+  </div>
+</div>
+<!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class = "home-sec-head">About Cogni<b>Cop</b></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 aboutcol">
+        <%= image_tag("home-find.png", :alt => "find", id: "aboutimg") %>
+        <h3>Find a fit</h3>
+        <p><i>By computing an applicant's fit by measuring his/her skills, experiences, and background against the company's needs, CogniCop can tell you whether an applicant is fit for the company and the role he/she could be most effective.</i></p>
+      </div>
+      <div class="col-lg-4 aboutcol">
+        <%= image_tag("home-progress.png", :alt => "progress", id: "aboutimg") %>
+        <h3>Quantify quality</h3>
+        <p><i>Given the company's key performance indices, a recruiter's ratings could be displayed. By providing a graphic view of data, CogniCop can show a recruiter's performance over a desired time-frame, as an individual and against other recruiters</i></p>
+      </div>
+      <div class="col-lg-4 aboutcol">
+        <%= image_tag("home-analyze.png", :alt => "analyze", id: "aboutimg") %>
+        <h3>Analyze Resources</h3>
+        <p><i>As a tool for business intelligence, CogniCop provides its users with graphical representation of data with regards to resources - from employee demographics, to the shortage and/or abundance of company talent.</i></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="contact-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <h1 class = "home-sec-head">Cogni<b>Cop</b>'s Features</h1>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2">
-                </div>
-                <div class="col-lg-8">
-                  <h4>As a one-stop tool for Recruitment and Business Intelligence, CogniCop aims to promote company <b>transparency</b>, recruitment <b>integrity</b>, while developing recruiters' <b>passion</b>, through <b>collaboration</b>, driven towards <b>customer care.</b><br><br></h4>
-                </div>
-                <div class="col-lg-2">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-2 featureicon">
-                  <%= image_tag("feature-business.png", :alt => "business decision", id: "featureimg") %>
-                </div>
-                <div class="col-lg-4 featuredes">
-                  <h3>Business Decision Recommender</h3>
-                  <p><i>Analyzes all company data, and gives insights on efficient and effective business decisions.</i></p>
-                </div>
-                <div class="col-lg-2 featureicon">
-                  <%= image_tag("feature-fit.png", :alt => "business decision", id: "featureimg") %>
-                </div>
-                <div class="col-lg-4 featuredes">
-                  <h3>Fit Finder</h3>
-                  <p><i>Computes a candidate's fit to the company and suggests open roles, and or jobs, that will champion a new hire's performance</i></p>
-                </div>
-              </div>
-              <div class="row" style="padding-top:1rem;">
-                <div class="col-lg-2 featureicon">
-                  <%= image_tag("feature-tracker.png", :alt => "business decision", id: "featureimg") %>
-                </div>
-                <div class="col-lg-4 featuredes">
-                  <h3>Application Tracker</h3>
-                  <p><i>To maximize the recruitment tool, all recruiters' and business leaders could look at the application history and track a candidate's progress.</i></p>
-                </div>
-                <div class="col-lg-2 featureicon">
-                  <%= image_tag("feature-evaluate.png", :alt => "business decision", id: "featureimg") %>
-                </div>
-                <div class="col-lg-4 featuredes">
-                  <h3>Data Analysis</h3>
-                  <p><i>To utilize application data, one could easily access and quantify a recruiter's performance based on their recruiting data</i></p>
-                </div>
-              </div>
-              <div class="row" style="padding-top:2rem;">
-                <center>
-                      <%= link_to "Use CogniCop", login_path, class: "btn btn-primary" %>
-                </center>
-              </div>
-          </div>
-      </section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class = "home-sec-head">Cogni<b>Cop</b>'s Features</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8">
+        <h4>As a one-stop tool for Recruitment and Business Intelligence, CogniCop aims to promote company <b>transparency</b>, recruitment <b>integrity</b>, while developing recruiters' <b>passion</b>, through <b>collaboration</b>, driven towards <b>customer care.</b><br><br></h4>
+      </div>
+      <div class="col-lg-2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 featureicon">
+        <%= image_tag("feature-business.png", :alt => "business decision", id: "featureimg") %>
+        <br><br>
+      </div>
+      <div class="col-lg-4 featuredes">
+        <h3>Business Decision Recommender</h3>
+        <p><i>Analyzes all company data, and gives insights on efficient and effective business decisions.</i></p>
+      </div>
+      <div class="col-lg-2 featureicon">
+        <%= image_tag("feature-fit.png", :alt => "business decision", id: "featureimg") %>
+        <br><br>
+      </div>
+      <div class="col-lg-4 featuredes">
+        <h3>Fit Finder</h3>
+        <p><i>Computes a candidate's fit to the company and suggests open roles, and or jobs, that will champion a new hire's performance</i></p>
+      </div>
+    </div>
+    <div class="row" style="padding-top:1rem;">
+      <div class="col-lg-2 featureicon">
+        <%= image_tag("feature-tracker.png", :alt => "business decision", id: "featureimg") %>
+      </div>
+      <div class="col-lg-4 featuredes">
+        <h3>Application Tracker</h3>
+        <p><i>To maximize the recruitment tool, all recruiters' and business leaders could look at the application history and track a candidate's progress.</i></p>
+      </div>
+      <div class="col-lg-2 featureicon">
+        <%= image_tag("feature-evaluate.png", :alt => "business decision", id: "featureimg") %>
+      </div>
+      <div class="col-lg-4 featuredes">
+        <h3>Data Analysis</h3>
+        <p><i>To utilize application data, one could easily access and quantify a recruiter's performance based on their recruiting data</i></p>
+      </div>
+    </div>
+    <div class="row" style="">
+      <br><br>
+      <center>
+        <%= link_to "Use CogniCop", login_path, class: "btn btn-primary" %>
+      </center>
+    </div>
+  </div>
+</section>
 </section>

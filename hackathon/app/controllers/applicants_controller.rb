@@ -9,6 +9,13 @@ class ApplicantsController < ApplicationController
     @languages = Language.all
     @statuses = Status.all
     @applicants = Applicant.all
+
+    @chart1 = LazyHighCharts::HighChart.new('graph') do |f|
+      f.title({text: 'Stratificatied<br>Applicant<br>Demographics', align: 'center', verticalAlign: 'middle', y: 40})
+      f.tooltip({pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'})
+      f.plotOptions({pie: 'dataLabels: {enabled: true, distance: -50, style: {fontWeight: "bold", color: "white"}}, startAngle: -90, endAngle: 90, center: ["50%", "75%"]}'})
+      f.series({type: 'pie', name: 'Demographics', innerSize: '50%', data: [['Firefox', 10.38], ['IE', 56.33], ['Chrome', 24.03], ['Safari', 4.77], ['Opera', 0.91], {name: 'Proprietary or Undetectable', y: 0.2, dataLabels: {enabled: false}}]})
+    end
   end
 
   # GET /applicants/1
