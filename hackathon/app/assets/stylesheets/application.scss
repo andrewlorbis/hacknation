@@ -22,6 +22,8 @@
 @import "AdminLTE/skins/skin-blue";
 
 
+//#6db33f = Cognizant Green
+
 //Custom fonts
 @font-face {
         font-family: 'TimeBurner';
@@ -38,7 +40,12 @@
         src: url('/assets/OpenSans-Regular');
         }
 
-//#6db33f = Cognizant Green
+.turbolinks-progress-bar {
+  height: 2px;
+  background-color: green;
+  // box-shadow: 0px 1px 3px;
+}
+
 .navbar-dashboard, .logo {
     background-color: #4cb3cf !important;
 }

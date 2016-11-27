@@ -12,7 +12,7 @@
         <h6>Recruitment Specialist</h6>
         <br><br>
         <h4>
-          Success Rate: <%= @recruiter.rate.floor %>
+          Success Rate: <b><%= @recruiter.rate.floor %>%</b>
         </h4>
       </div>
     </div>
@@ -53,7 +53,7 @@
                     <td><%= applicant.location %></td>
                     <td><%= applicant.gpa %></td>
                     <td><%= applicant.exp %></td>
-                    <td><%= applicant.statuses.name %></td>
+                    <td><%= applicant.statuses.last.name %></td>
                     <td><center><%= link_to applicant do %><span class="fa fa-eye fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to edit_applicant_path(applicant) do %><span class="fa fa-edit fa-1x"></span><% end %></center></td>
                     <td><center><%= link_to applicant, method: :delete, data: { confirm: 'Are you sure to remove this applicant?' }  do %><span class="fa fa-trash fa-1x"></span><% end %></center></td>
